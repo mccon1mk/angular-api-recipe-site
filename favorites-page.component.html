@@ -1,0 +1,17 @@
+<div class="favorites-page-container">
+  <span class="headline">
+    <h1>Favorite Recipes</h1>
+  </span>
+  <div class="favorite-list">
+
+    <ul *ngFor="let item of favoriteArray; let i = index">
+      <li>
+        <div>{{ item.recipe.label }}</div>
+        <div><img class="thumbnails" src="{{ item.recipe.image }}" /></div>
+        <div><button (click)="delete(i)">Delete</button></div>
+      </li>
+
+    </ul>
+
+  </div>
+</div>
